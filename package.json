@@ -1,0 +1,38 @@
+{
+  "name": "is-error-constructor",
+  "version": "0.0.0",
+  "description": "Check if a value is an error constructor",
+  "license": "MIT",
+  "repository": "sindresorhus/is-error-constructor",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "is",
+    "error",
+    "constructor",
+    "err",
+    "ctor",
+    "check",
+    "detect",
+    "instanceof"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
