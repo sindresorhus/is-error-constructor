@@ -1,4 +1,2 @@
 'use strict';
-module.exports = ctor => {
-	return ctor === Error || ctor.prototype instanceof Error;
-};
+module.exports = ctor => (ctor === Error || ctor.prototype instanceof Error);
