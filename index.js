@@ -1,2 +1,7 @@
 'use strict';
-module.exports = ctor => (ctor === Error || ctor.prototype instanceof Error);
+
+const isErrorConstructor = constructor =>
+	constructor === Error || constructor.prototype instanceof Error;
+
+module.exports = isErrorConstructor;
+module.exports.default = isErrorConstructor;
