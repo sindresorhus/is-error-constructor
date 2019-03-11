@@ -1,6 +1,6 @@
 import assert from 'assert';
 import test from 'ava';
-import m from './';
+import isErrorConstructor from '.';
 
 class CustomError extends RangeError {
 	constructor() {
@@ -9,20 +9,20 @@ class CustomError extends RangeError {
 	}
 }
 
-test(t => {
-	t.true(m(Error));
-	t.true(m(RangeError));
-	t.true(m(SyntaxError));
-	t.true(m(assert.AssertionError));
-	t.true(m(CustomError));
-	t.false(m(() => {}));
-	t.false(m({}));
-	t.false(m(''));
-	t.false(m(new Error()));
-	t.false(m(new assert.AssertionError({
+test('isErrorConstructor', t => {
+	t.true(isErrorConstructor(Error));
+	t.true(isErrorConstructor(RangeError));
+	t.true(isErrorConstructor(SyntaxError));
+	t.true(isErrorConstructor(assert.AssertionError));
+	t.true(isErrorConstructor(CustomError));
+	t.false(isErrorConstructor(() => {}));
+	t.false(isErrorConstructor({}));
+	t.false(isErrorConstructor(''));
+	t.false(isErrorConstructor(new Error()));
+	t.false(isErrorConstructor(new assert.AssertionError({
 		actual: '',
 		expected: '',
 		operator: ''
 	})));
-	t.false(m(new CustomError()));
+	t.false(isErrorConstructor(new CustomError()));
 });
