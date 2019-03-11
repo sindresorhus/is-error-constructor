@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save is-error-constructor
+$ npm install is-error-constructor
 ```
 
 

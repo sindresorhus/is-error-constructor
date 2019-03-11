@@ -9,7 +9,7 @@ class CustomError extends RangeError {
 	}
 }
 
-test('isErrorConstructor', t => {
+test('main', t => {
 	t.true(isErrorConstructor(Error));
 	t.true(isErrorConstructor(RangeError));
 	t.true(isErrorConstructor(SyntaxError));
