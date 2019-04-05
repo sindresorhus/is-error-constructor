@@ -1,5 +1,5 @@
-import {expectType} from 'tsd-check';
-import isErrorConstructor from '.';
+import {expectType} from 'tsd';
+import isErrorConstructor = require('.');
 
 const foo = 'foo';
 
