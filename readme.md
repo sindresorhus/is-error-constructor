@@ -1,4 +1,4 @@
-# is-error-constructor [![Build Status](https://travis-ci.org/sindresorhus/is-error-constructor.svg?branch=master)](https://travis-ci.org/sindresorhus/is-error-constructor)
+# is-error-constructor
 
 > Check if a value is an error constructor
 
