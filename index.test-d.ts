@@ -1,8 +1,8 @@
-import {expectType} from 'tsd';
-import isErrorConstructor = require('.');
+import {expectAssignable} from 'tsd';
+import isErrorConstructor from './index.js';
 
 const foo = 'foo';
 
 if (isErrorConstructor(foo)) {
-	expectType<ErrorConstructor>(foo);
+	expectAssignable<ErrorConstructor>(foo);
 }

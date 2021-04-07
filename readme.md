@@ -2,18 +2,16 @@
 
 > Check if a value is an error constructor
 
-
 ## Install
 
 ```
 $ npm install is-error-constructor
 ```
 
-
 ## Usage
 
 ```js
-const isErrorConstructor = require('is-error-constructor');
+import isErrorConstructor from 'is-error-constructor';
 
 isErrorConstructor(Error);
 //=> true
@@ -30,7 +28,6 @@ isErrorConstructor(UnicornError);
 //=> true
 ```
 
+## Related
 
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+- [is](https://github.com/sindresorhus/is) - Type check values

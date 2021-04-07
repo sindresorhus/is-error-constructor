@@ -1,6 +1,6 @@
 import assert from 'assert';
 import test from 'ava';
-import isErrorConstructor from '.';
+import isErrorConstructor from './index.js';
 
 class CustomError extends RangeError {
 	constructor() {
@@ -18,7 +18,7 @@ test('main', t => {
 	t.false(isErrorConstructor(() => {}));
 	t.false(isErrorConstructor({}));
 	t.false(isErrorConstructor(''));
-	t.false(isErrorConstructor(new Error()));
+	t.false(isErrorConstructor(new Error())); // eslint-disable-line unicorn/error-message
 	t.false(isErrorConstructor(new assert.AssertionError({
 		actual: '',
 		expected: '',
